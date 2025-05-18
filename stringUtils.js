@@ -1,6 +1,6 @@
 function capitalize(str) {
     try {
-        if (typeof str !== "string") {
+        if (typeof str !== "string" || str === "") {
             throw new TypeError("Please input a string")
         } else {
             return str.charAt(0).toUpperCase() + str.slice(1); 
@@ -13,7 +13,7 @@ function capitalize(str) {
 
 function reverse(str) {
     try {
-        if (typeof str !== "string") {
+        if (typeof str !== "string" || str === "") {
             throw new TypeError("Please input a string")
         }
         if (str.length <= 1) {
@@ -29,7 +29,7 @@ function reverse(str) {
 
 function contains(str, substr) {
     try {
-        if (typeof str !== "string") {
+        if (typeof str !== "string" || str === "") {
             throw new TypeError("Please input a string")
         } else {
         return str.includes(substr);
